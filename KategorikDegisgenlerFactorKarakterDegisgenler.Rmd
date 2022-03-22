@@ -1,0 +1,30 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+Karakter Degisgen vs Kategorik Degisgenler (factor)
+
+```{r}
+karakter <- c("Murat","Semra","Coskun")
+others = c("Melike","Kayra")
+others
+karakter
+typeof(karakter) # class(karakter) de aynı isi yapar.
+factor(karakter)#Karakter değisgenini kategorik degisgene cevirir
+factor(others)
+```
+Kategorik Degisgen ve Sirali Kategorik Degisgen Nominal-Ordinal
+```{r}
+
+rutbeler <- c("Onbasi","Yuzbası","Binbasi","Albay","General")
+rutbeler
+class(rutbeler)
+# or
+typeof(rutbeler)
+factor(rutbeler)
+ordered(rutbeler) # ordinal olan bu degerler yani rütbeler arasında yetkinlik farkı var. Sıralı gelmedi.
+ordered (rutbeler,levels=rutbeler)# Şimdi rğrbelerin yetkinliklerine göre sıralama yaprı.
+
+```
+

@@ -1,0 +1,20 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+Veri Okuma
+```{r}
+data()
+df<-swiss
+df
+survival
+library(readxl)
+ McsS <- read_excel("McsS.XLSX")
+ View(McsS)
+ mcsCol <- McsS[,c("USERNAME_","PASSWORD_")]
+ mcsCol
+ 
+data(package = .packages(all.available = TRUE))
+```
+

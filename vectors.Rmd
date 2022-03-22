@@ -1,0 +1,132 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+Vektorler
+```{r}
+a <- rep(3:9,5)
+a
+b <- 3:9
+b
+c <- c(3,4,5,6,7,8,9)
+c
+is.vector(c) # vektör olup olmadığını anlamak
+typeof(c)
+d <- c("Murat","Melike","Kayra")
+d
+is.vector(d)
+typeof(d)  # Tipi 
+e <- c("Murat",1,2,3,4)
+e
+typeof(e)
+f <- c(1L,2L,3L) # Double Integera zorlama
+typeof(f)
+```
+Kosullu Eleman Secme
+```{r}
+veri <- 10:100
+is.vector(veri)
+typeof(veri)
+veri[1] 
+veri[c(1,11,33)]
+
+veri[veri > 41 & veri < 49]
+
+
+```
+Matrix
+Matrix Create
+```{r}
+matrix(1:9,3,3)
+
+a<- 1:9
+matrix(a,2,3)
+#use help menu
+
+v1<- c(12,34,23,1,2)
+v2<- c(3,5,7,8,9)
+
+v3<- c(45,67,76,89,43)
+cbind(v1,v2,v3) # Kolon bazında
+
+A<-rbind(v1,v2,v3) # Satrı bazında 
+```
+Matris Eleman Isleri
+```{r}
+A
+A[1,]
+A[,2]
+
+A[1:2,]
+A[c(1,2),]
+A[,2:3]
+A[,c(2,3)]
+A[1,2]
+```
+Matris Kosullu Eleman Secimi
+```{r}
+A
+A[A[,1]>4,1] # A matrisindeki 1. surundaki 4 den buyuk degerler
+A[3,A[3,]>43 & A[3,]<89]
+
+```
+
+Data Frame Nedir?
+Data Frame Olusturma
+```{r}
+df <- data.frame(
+  Name = c("Murat","Melike","Kayra"),
+  Old = c(48L,13L,8L),
+  Gender = c("E","K","E")
+  
+)
+df
+
+as.data.frame() # uygunsa data.frame çevirir.
+```
+Yeni Degisken Ekle / Silme
+```{r}
+df$Name
+df$Old
+
+attach(df) # df deki colonlari dışarıda kullanmamıza yarar
+Name
+# Data.frame colon/değişken eklemek
+df$Weight<- c(93,35,22)
+df
+# Date.Frameden colon/değisken silmek
+df$Wight <- NULL
+df
+df$colon1<-c(-1,2,4)
+df$colon2<-c("w","q","s")
+df
+# Diger silme yontemi
+df<-df[,c("Name","Old","Gender","Weight") ]
+```
+DataFrame indeksi ve eleman secimi
+```{r}
+df[,Old>12]
+df[Old>12,]
+```
+Liste ve Tibble 
+```{r}
+
+install.packages("tidyverse")
+library(tidyverse)
+# Bir birinden farklı tipleri tutmamıza yarıyor.
+liste <-list(
+  Name= c("Murat","Semra","Coskun"),
+  Number =c(1,2,4),
+  RandomNumber = rep(1:33)
+  
+)
+l$Old = c(13,45,67)
+l$Number = NULL
+l
+tibble(
+  x = 1:5, 
+  y = 1, 
+  z = x ^ 2 + y
+)
+```
+

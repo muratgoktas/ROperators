@@ -1,0 +1,17 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+Fonksiyonlar
+```{r}
+karesi <- function(x){
+  x**2
+}
+
+
+karesi(4)
+
+
+```
+

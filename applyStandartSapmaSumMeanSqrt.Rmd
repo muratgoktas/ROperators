@@ -1,0 +1,30 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+head(mtcars)
+
+df<-mtcars[,c("mpg","cyl","disp")]
+apply(df, 2, sum) #toplama
+apply(df, 1, function(x)x^2) #function kullanımı
+apply(df,2,mean) #ortama
+apply(df, 2, sqrt) #Karekök
+apply(df, 2, function(x)sd(x)) # standart sapma
+apply(df,2,mean) #ortama
+
+```
+
+Map
+```{r}
+#library("purrr")
+mtcars %>%
+  split(.$cyl) %>%
+  map(~ lm(mpg ~ wt, data=.))%>%
+  map(summary) %>%
+  map_dbl("r.squared")
+
+```
+

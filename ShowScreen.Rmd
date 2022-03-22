@@ -1,0 +1,85 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+## Operators
+### Assignment Operators
+
+
+
+```{r}
+# <- we use this operator for function or object assignment.
+# =  Only  we use this operator for variable assignment.
+# <<- This operator convert in function's variable to global variable.
+a <- 5
+a
+b <- 3
+a * b
+```
+
+### Arithmatic Operatos
+
+```{r}
+#Operators
+# + addition
+# / division
+# * multiplication
+# - subtraction
+# ^ or ** exponentiation
+
+
+```
+
+### Logical Operators
+
+```{r}
+# < small
+# > big
+# <= small eque
+# >= big eque
+# != not eque
+# x | y  x or y
+# x & y  x and y
+
+myData <- 1:20 
+myData
+myData[3]
+myData[ myData < 4 ]
+myData[ myData >= 5 ]
+m <- myData[ myData >4 & myData<9]
+m
+```
+## Mathematica Operations
+```{r}
+# Calculate R
+# + - * / ^ **
+# functions
+# log , log10 ,log2
+# sqrt
+# abs - mutlak deger
+
+sqrt(16)
+abs(-32)
+log(20)
+log10(100)
+log2(64)
+
+
+```
+## Base Functions
+
+```{r}
+sessionInfo()
+getwd() 
+setwd()
+dir()
+list.files()
+file.exists("ShowScreen.nb.html")
+ls()
+rm(a)
+cat("Murat")
+print("Goktas")
+
+```
+

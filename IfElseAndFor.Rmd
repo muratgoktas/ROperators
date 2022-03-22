@@ -1,0 +1,33 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+
+```
+
+If else
+```{r}
+a<- 4
+if(a>5){
+  print("Buyuk")
+}else{
+  print("Kucuk")
+}
+
+ifelse(a>5,"yes","no")
+```
+For
+```{r}
+for(i in 1:7){
+  print(i*3)
+}
+
+a<-c(1,3,5,7,9)
+
+for(i in a){
+  print(i^2)
+}
+
+```
+

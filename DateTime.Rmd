@@ -1,0 +1,41 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+install.packages("lubridate")
+library(lubridate)
+df_bir <- data.frame(
+  Name=c("Murat","Melike","Kayra"),
+  BirthDate=c("19740301","20080423","20130507"),
+  Weight=c(90,35,22)
+)
+df_bir$BirthDate<- ymd(df_bir$BirthDate)#YearMonthDay
+str(df_bir)
+df_iki <- data.frame(
+  Name=c("Coco","Semris","Selmis"),
+  BirthDate=c("1982_02_02","1979_12_23","2013_05_07"),
+  Weight=c(90,65,60)
+    )
+str(df_iki)# Birtdate char olarak gözukuyor
+df_iki$BirthDate<- ymd(df_iki$BirthDate) # Bu şekilde date oldu.
+df_uc<-data.frame(
+  Name=c("Birgul","Deniz","Tuana"),
+  BirthDate=c("03011974","30032008","05072013"),
+  Weight=c(74,60,15)
+)
+
+df_uc$BirthDate<- dmy(df_uc$BirthDate) # GunAyYıl var buradaki sıralama
+
+str(df_uc)
+
+df_dort <- data.frame(
+  Name=c("Sait","Faik","Abasiyanik"),
+  BirthDate=c(03302022,01282000,03041999)
+  
+)
+
+str(df_dort)
+df_dort$BirthDate<- mdy(df_dort$BirthDate)
+```
+
