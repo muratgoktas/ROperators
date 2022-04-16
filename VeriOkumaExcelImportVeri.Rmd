@@ -16,5 +16,6 @@ library(readxl)
  mcsCol
  
 data(package = .packages(all.available = TRUE))
+getwd()
 ```
 
